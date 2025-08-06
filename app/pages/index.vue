@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col items-center justify-center gap-4 h-screen aldrich-regular"
+    class="flex flex-col items-center justify-center gap-4 h-screen aldrich-regular body bg-image-20-opacity"
   >
     <div id="logo" class="rounded-4xl w-40 h-40 bg-white">
       <img src="~/assets/logo.jpg" alt="" class="w-full h-full rounded-4xl" />
@@ -59,5 +59,24 @@
   font-family: "Aldrich", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+/* 
+.body {
+  background-image: url("~/assets/bg.jpg");
+  background-size: cover;
+} */
+
+.bg-image-20-opacity::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("~/assets/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.35; /* This is the key part */
+  z-index: -1;
 }
 </style>
